@@ -1,0 +1,7 @@
+La entrega se realizó correctamente.
+Curso: 01_Fundamentos_CS_24-05, 01 - Fundamentos de Ciberseguridad
+Evaluación: Reto Python | S.1
+
+Fecha de entrega: 5/6/24 0:47
+Remitente: Víctor Manuel Martínez
+Número de confirmación: f412d7c2f68742b394dee4e1306fc22e
