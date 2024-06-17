@@ -1,0 +1,47 @@
+¡Comencemos con el cuestionario del Reto Criptografía!
+
+
+
+Se plantea un ejercicio en el que se han de superar los distintos niveles que se plantean a lo largo del reto.
+
+
+
+Para poder avanzar en cada uno de los niveles, haremos uso de lo aprendido en este módulo, poniendo en práctica el conocimiento adquirido de cada uno de los conceptos de los que consta el módulo:
+
+
+
+Codificación
+Cifrado simétrico
+Cifrado asimétrico
+Funciones Hash
+
+
+Para avanzar en cada uno de los niveles se deberá descifrar la contraseña del siguiente usuario, localizadas en el directorio /home de cada usuario.
+
+
+
+Al alcanzar el nivel deseado en cada apartado, se desbloqueará una nueva vía de trabajo que permitirá continuar con el siguiente concepto. Al alcanzar estos niveles concretos aparecerá el fichero flag_mid.txt que indicará cómo avanzar a los siguientes apartados:
+
+
+
+De Codificación > Cifrado simétrico, por ejemplo.
+
+
+
+Para comenzar el reto, debemos establecer una conexión por SSH (igual que en el reto de Python) con las siguientes credenciales:
+
+
+
+USER: encode1
+PASS: encode1
+
+
+¡Ánimo y a por ello!
+
+
+
+En esta evaluación se te calificará en base a los niveles finalizados durante el reto, podrás obtener pistas para conseguir avanzar de nivel en nivel por si te bloqueas y no sabes como continuar.
+
+
+
+La solicitud de pistas a lo largo del cuestionario hará que tu puntuación final disminuya, por lo que no las uses si no es totalmente necesario.

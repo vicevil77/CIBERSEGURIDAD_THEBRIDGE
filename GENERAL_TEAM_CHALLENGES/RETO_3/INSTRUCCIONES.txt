@@ -1,0 +1,14 @@
+¡Es hora de aplicar todo lo que habéis aprendido a lo largo de esta unidad!
+
+Realizar una investigación exhaustiva utilizando fuentes abiertas y todas las herramientas de OSINT que has adquirido a lo largo de la Unidad 1 - OSINT I
+
+Para llevar a cabo la actividad debéis escoger entre los integrantes una empresa, la cual será vuestro objetivo de investigación. Poneos de acuerdo entre los integrantes del grupo para así poder realizar la actividad de una manera más detallada y organizada. (Recordad que en la industria de la ciberseguridad el trabajo en equipo y la comunicación son esenciales para un buen funcionamiento de la seguridad en una empresa)
+
+Como objetivo tenéis:
+
+
+
+Presentación del Informe Ejecutivo, donde unificaréis toda información relevante que encontréis, recordar ofuscar siempre usuarios y contraseñas, al igual que datos sensibles que encontréis.
+
+
+Realizar una presentación dinámica, que expondréis los días del Live Review - Team Challenge.

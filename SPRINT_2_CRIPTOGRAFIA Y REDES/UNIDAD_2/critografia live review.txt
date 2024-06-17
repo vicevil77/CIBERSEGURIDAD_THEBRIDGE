@@ -1,0 +1,28 @@
+❯ nano password.txt
+❯ #cifrado de flijo con ssl
+❯ openssl rc4 -in password.yxy -out password.enc -pbkbf2
+rc4: Unknown option or cipher: pbkbf2
+rc4: Use -help for summary.
+40861ECADA7F0000:error:0308010C:digital envelope routines:inner_evp_generic_fetch:unsupported:../crypto/evp/evp_fetch.c:355:Global default library context, Algorithm (pbkbf2 : 0), Properties (<null>)
+❯ openssl rc4 -in password.txt -out password.enc -pbkbf2
+
+rc4: Unknown option or cipher: pbkbf2
+rc4: Use -help for summary.
+4016FF26667F0000:error:0308010C:digital envelope routines:inner_evp_generic_fetch:unsupported:../crypto/evp/evp_fetch.c:355:Global default library context, Algorithm (pbkbf2 : 0), Properties (<null>)
+❯ openssl rc4 -in password.txt -out password.enc -pbkdf2
+
+enter RC4 encryption password:
+Verifying - enter RC4 encryption password:
+❯ cat password.enc
+zsh: command not found: bat
+❯ bat password.enc
+zsh: command not found: bat
+❯ nano password.enc
+❯ DESCIFRADO
+❯ openssl des -d  -in password.des -pbkdf2
+enter DES-CBC decryption password:
+juan: Password
+
+
+
+
