@@ -1,0 +1,7 @@
+¡Unidad 1 - Fundamentos de Firewall!
+
+Para el Challenge de esta primera unidad no vas contar con una entrega como tal. Para esta actividad lo que te pedimos es tener instalado PfSense y configurado según vas a ver en los vídeos del workout.
+
+Sabemos que la configuración es algo compleja y para poder llevar a cabo el challenge de la Unidad 2 y el Team Challenge vais a necesitar que sepáis manejaros con PfSense y sus configuraciones, así que os dejamos este tiempo para poder haceros a la herramienta y saber como se configura.
+
+¡¡Recordaros que ante cualquier duda e incidencia nos tenéis a vuestra disposición en el horario de las tutorías!!

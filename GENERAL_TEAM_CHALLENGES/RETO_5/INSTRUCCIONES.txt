@@ -1,0 +1,14 @@
+¡PfSense Challenge!
+
+
+
+Para la entrega del siguiente Team Challenge, deberás realizar un informe detallado en el que se muestre, a través de imágenes, la creación de las reglas en PfSense. El informe debe incluir:
+
+
+
+Capturas de Pantalla: Imágenes claras y descriptivas que muestren la reglas en PfSense.
+Descripción de las Reglas: Las imágenes deben estar acompañadas por una descripción de la regla creada, explicando su propósito y configuración.
+Pruebas de Funcionamiento: Añade imágenes que demuestren cómo estas reglas están funcionando, permitiendo o denegando el tráfico de red según lo previsto. Esto puede incluir capturas de pantalla de pruebas de tráfico, logs de PfSense, o cualquier otra evidencia relevante.
+
+
+Este informe debe ser claro y conciso, permitiendo a cualquier persona entender el funcionamiento de sus reglas en PfSense.
