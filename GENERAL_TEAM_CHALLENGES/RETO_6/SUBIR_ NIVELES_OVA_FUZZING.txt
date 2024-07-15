@@ -1,0 +1,23 @@
+Contenido del cuestionario
+¡Comencemos con el Reto Fuzzing!
+
+
+
+El presente ejercicio pretende poner de manifiesto la importancia de la búsqueda de información, a través de la utilización de la técnicas de fuzzing.
+
+
+
+El contexto del ejercicio sitúa al alumno ante un servidor que publica una aplicación web, a través de la cual tendrá que ser capaz de, con las técnicas aprendidas en el módulo, acceder a la misma, y de alguna forma poder llegar a ser administrador del sistema.
+
+
+
+Para ello se deberá hacer uso de una máquina virtual Kali, en la misma red que el servidor (ambas en Red NAT), que permitirá hacer uso de las herramientas necesarias para interactuar con la aplicación desplegada en el servidor web y poder desarrollar el ejercicio por completo.
+
+
+
+Para superar este Challenge necesitas entregar dos cosas. 
+
+
+
+Las credenciales que te darán acceso como Root del sistema.
+Un pantallazo haciéndonos ver que has logrado ser Root!
