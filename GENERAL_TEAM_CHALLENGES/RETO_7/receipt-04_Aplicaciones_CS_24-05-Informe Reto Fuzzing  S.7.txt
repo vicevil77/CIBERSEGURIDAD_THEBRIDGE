@@ -1,0 +1,8 @@
+La entrega se realizó correctamente.
+Curso: 04_Aplicaciones_CS_24-05, 04 - Ataques y Protección de Aplicaciones Web
+Evaluación: Informe Reto Fuzzing | S.7
+
+Fecha de entrega: 19/7/24 18:11
+Tamaño de entrega: undefined
+Remitente: Víctor Manuel Martínez
+Número de confirmación: 5d71347fd882403a8c65ea30d3564c66
