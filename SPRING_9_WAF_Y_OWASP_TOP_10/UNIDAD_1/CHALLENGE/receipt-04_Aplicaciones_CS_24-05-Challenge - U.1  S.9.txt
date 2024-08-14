@@ -1,0 +1,8 @@
+La entrega se realizó correctamente.
+Curso: 04_Aplicaciones_CS_24-05, 04 - Ataques y Protección de Aplicaciones Web
+Evaluación: Challenge - U.1 | S.9
+
+Fecha de entrega: 14/8/24 2:52
+Tamaño de entrega: undefined
+Remitente: Víctor Manuel Martínez
+Número de confirmación: e9f9bcd62dd3402d9edbb191a7180006

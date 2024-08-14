@@ -1,0 +1,8 @@
+La entrega se realizó correctamente.
+Curso: 04_Aplicaciones_CS_24-05, 04 - Ataques y Protección de Aplicaciones Web
+Evaluación: Reto XSS | S.8
+
+Fecha de entrega: 13/8/24 10:45 (fuera de plazo)
+Tamaño de entrega: undefined
+Remitente: Víctor Manuel Martínez
+Número de confirmación: 311122ad7ca146dfbfd6ef6f58c92dd7
