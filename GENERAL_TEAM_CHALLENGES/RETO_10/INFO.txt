@@ -1,0 +1,33 @@
+Contenido del cuestionario
+¡Comencemos con el Reto Obiobá!
+
+
+
+El presente ejercicio pretende poner de manifiesto la importancia de la detección de vulnerabilidades conocidas, así como la demostración de la facilidad de explotación de algunas de ellas, públicamente conocidas y con exploits o pruebas de concepto también publicados, de cara a vulnerar un sistema, en apariencia estable y seguro. Con ello, pretendemos alcanzar
+
+el objetivo de ejecutar comandos en la máquina en cuestión.
+
+
+
+Reto Obiobá
+
+
+
+
+Para ello, la máquina virtual proporcionada se deberá configurar en la misma red que nuestra máquina local (atacante), y procederemos con el ejercicio.
+
+
+
+Nota: Es posible que aparezca "503 Service Temporarily Unavailable" en uno de los apartados vulnerables de la máquina. Si os ocurre esto reiniciad la máquina vulnerable hasta que no aparezca el error para que pueda funcionar correctamente la fase de explotación.
+
+
+
+Como entrega deberás mostrar la metodología y pasos a seguir durante la explotación, con una breve explicación sobre qué realizas con cada comando. Únicamente céntrate en exponer los pasos que hayan sido fructíferos en conseguir explotar las vulnerabilidades de la máquina. En múltiples ocasiones nos encontraremos con una gran diversidad de posibles caminos de explotación, en estos casos siempre expondremos los que nos hayan permitido avanzar en el ejercicio de pentesting. 
+
+
+
+Recuerda: ¡¡¡Sí no consigues explotar la máquina por un camino tal vez no sea ese, piensa otras posibles líneas de explotación!!!
+
+
+
+¡Mucha suerte!
