@@ -1,0 +1,8 @@
+La entrega se realizó correctamente.
+Curso: 05_Explotacion_CS_24-05, 05 - Explotación & Metasploit
+Evaluación: Challenge - U.1 | S.10
+
+Fecha de entrega: 26/8/24 15:06
+Tamaño de entrega: undefined
+Remitente: Víctor Manuel Martínez
+Número de confirmación: 93727b0ef7fe4342bd1699261cda44a6
