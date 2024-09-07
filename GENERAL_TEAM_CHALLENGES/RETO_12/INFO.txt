@@ -1,0 +1,29 @@
+Contenido del cuestionario
+¡Comencemos con el Reto Sar!
+
+
+
+Tu tarea será analizar la máquina víctima en busca de posibles vulnerabilidades, realizando un ejercicio de pentesting. Como objetivo deberás conseguir obtener una Shell de la máquina a auditar, y conseguir persistencia. 
+
+
+
+Para poder llevar acabo la auditoría descarga la OVA en el siguiente enlace:
+
+
+
+Sar.ova
+
+
+Para ello, la máquina virtual proporcionada se deberá configurar en la misma red que nuestra máquina host, y realizaremos la explotación a través de nuestra Kali.
+
+
+
+Como entrega deberás mostrar la metodología y pasos a seguir durante la explotación, con una breve explicación sobre qué realizas con cada comando. Únicamente céntrate en exponer los pasos que hayan sido fructíferos en conseguir explotar las vulnerabilidades de la máquina. En múltiples ocasiones nos encontraremos con una gran diversidad de posibles caminos de explotación, en estos casos siempre expondremos los que nos hayan permitido avanzar en el ejercicio de pentesting.
+
+
+
+Recuerda: ¡¡¡Sí no consigues explotar la máquina por un camino tal vez no sea ese, piensa otras posibles líneas de explotación!!!
+
+
+
+¡Mucha suerte!
