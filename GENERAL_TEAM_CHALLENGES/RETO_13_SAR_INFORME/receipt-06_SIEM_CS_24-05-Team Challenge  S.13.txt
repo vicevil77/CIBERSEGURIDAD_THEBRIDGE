@@ -1,0 +1,8 @@
+La entrega se realizó correctamente.
+Curso: 06_SIEM_CS_24-05, 06 - SIEM y REGEX
+Evaluación: Team Challenge | S.13
+
+Fecha de entrega: 21/9/24 23:04
+Tamaño de entrega: undefined
+Remitente: Víctor Manuel Martínez
+Número de confirmación: 6da11dad108d4bdf8afdc98b684a6887

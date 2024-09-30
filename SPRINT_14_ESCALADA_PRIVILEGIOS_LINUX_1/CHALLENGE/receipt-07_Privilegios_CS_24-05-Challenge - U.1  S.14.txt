@@ -1,0 +1,7 @@
+La entrega se realizó correctamente.
+Curso: 07_Privilegios_CS_24-05, 07 - Escalada de Privilegios
+Evaluación: Challenge - U.1 | S.14
+
+Fecha de entrega: 20/9/24 13:51
+Remitente: Víctor Manuel Martínez
+Número de confirmación: a63d58b380574f59a2b0a522614f056f

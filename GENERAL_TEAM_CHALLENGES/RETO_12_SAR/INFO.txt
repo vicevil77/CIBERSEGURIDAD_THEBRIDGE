@@ -28,14 +28,20 @@
   </alerts>
 
   <logging>
-    <log_format>plain</log_format>                                                                                                                                                            </logging>
+    <log_format>plain</log_format> 
+ </logging>
 
-  <remote>
-    <connection>secure</connection>
-    <port>1514</port>
-    <protocol>tcp</protocol>
-    <queue_size>131072</queue_size>
-  </remote>
+ <remote>
+         <connection>
+                  <use_ca>yes</use_ca>
+		  <ca_verification_path>/etc/pki/CA/certs/myCA.pem</ca_verification_path>                     			        				
+                  <cert>/var/ossec/certs/wazuh.crt</cert>
+                  <key>/var/ossec/certs/wazuh.key</key>
+        </connection>
+        <port>1514</port>
+        <protocol>tcp</protocol>
+        <queue_size>131072</queue_size>
+ </remote>
 
   <!-- Rootcheck settings - Policy monitoring -->
   <rootcheck>

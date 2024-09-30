@@ -1,0 +1,16 @@
+<script>
+    // Entrada del usuario maliciosa
+     var userInput = "<script>alert('XSS!')</script>";  
+
+    // Función de escapada para sanitizar el HTML
+    function sanitize(input) {
+      var element = document.createElement('div');
+      // Convierte el texto a formato seguro
+      element.innerText = input;  
+      // Devuelve el texto sanitizado
+      return element.innerHTML; 
+    }
+    // Salida sanitizada
+    document.getElementById('output').innerHTML = sanitize(userInput); 
+ </script>
+

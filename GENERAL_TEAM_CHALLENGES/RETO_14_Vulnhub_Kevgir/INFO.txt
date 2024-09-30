@@ -1,0 +1,19 @@
+Contenido del cuestionario
+¡Bienvenido al Reto Kevgir!
+
+Como ya te imaginarás, y por el contenido del Sprint 14, en esta ocasión te enfrentarás a tu primer reto de escalada de privilegios. Antes de comenzar a explicar en qué consiste el reto, accede al siguiente enlace para descargar la máquina virtual:
+
+
+
+Reto Kevgir.ova
+
+
+Una vez descargada la máquina, del Team Challenge, debemos desplegarla en la misma red que nuestra máquina Kali. El objetivo final es conseguir ejecutar comandos como root a través de una terminal con conexión a la máquina Kevgir. Para poder lograrlo tendremos que hacer uso de uno de los posibles métodos existentes que permite elevar privilegios en un sistema Linux y utilizar el ingenio para poder llevarlo a cabo.
+
+
+
+Como entrega deberás realizar un documento donde muestres los pasos a realizar durante la explotación, acompañado de capturas que muestren el resultado del uso de los comandos pertinentes.
+
+
+
+A por ello!!
