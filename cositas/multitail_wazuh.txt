@@ -1,0 +1,76 @@
+sudo /media/sf_COMPARTIDA_WAZUH/monitor_logs_wazuh.sh - multitail wazuh
+
+sudo suricata -c /etc/suricata/suricata.yaml -i eth0 - suricata wazuh
+ sudo tail -f /var/log/suricata/suricata.log - log de suricata
+
+
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl --set-default-version 2
+
+para comprobar si los modulos funciona:
+sudo /var/ossec/bin/wazuh-modulesd -t
+
+SURICATA KALI
+IPS: sudo suricata -c /etc/suricata/suricata.yaml --af-packet -D
+
+IDS: sudo suricata -c /etc/suricata/suricata.yaml -i eth0
+
+MODO NORMNAL: sudo tail -f /var/log/suricata/eve.json
+
+
+modo verboso: sudo suricata -c /etc/suricata/suricata.yaml -i eth0 -v
+
+paquetes, estadísticas alertas etc: sudo suricatasc -c stats
+
+sacar de un sheell el TTY interactuivo ( que salga la barra y donde estas)
+ ( si no Python)
+python -c 'import pty; pty.spawn("/bin/bash")'
+
+MEJORAR LA SHELL
+python -c 'import pty; pty.spawn("/bin/bash")'
+export TERM=xterm
+stty rows 24 columns 80
+stty raw -echo
+PARA VOLVER A LA SHELL ORIGINAL EN CASO EXTREMO
+ export PS1='\u@\h:\w\$ '
+
+stty sane
+reset
+
+
+
+VOLVER A SHELL ORIGINAL
+script /dev/null -c bash
+
+BUSQUEDA WILDCARDS O COMODINES
+LA MEWJOR : grep -r '\*' /etc/init.d /etc/systemd /etc/rc.local 2>/dev/null | cut -d: -f1 | sort -u | xargs ls -ltr 2>/dev/null
+- FACIL Recordar 
+find /etc/init.d /etc/systemd /etc/rc.local -type f -exec ls -ltr {} \; 2>/dev/null
+BUSCAR ARCHIVOS SOBREESCRIBIBLES EN EL SISTEMA
+ find / -writable -type f -exec ls -ltr {} \;  2>/dev/null
+
+
+COMANDOS PARA HACER UN STRACE A UN ARCHIVO .SO CON INTENCION DE ESCALAR PPRIV.
+strace /usr/local/bin/suid-so 2>&1 | grep -i -E "open|access|no such file"
+strace /usr/sbin/exim-4.84-3 | grep i -E "open|
+
+COMPILAR UNA BIBLIOTECA no un simple script)
+gcc -fPIC -shared -o /home/user/ambientus.so /home/user/ambientus.c
+
+EJECUTAR Y COMPROBAR SI UNA BIBLIOTECA ES VULNERABLE A VARIABLES AMBIENTE
+LD_PRELOAD=/home/user/ambientus.so /ruta/al/binario
+LD_PRELOAD=/home/user/ambientus.so /usr/lib/pt_chown
+
+FUZZIN CON FFUZ CON ROCKYOU Y FILTRANDO POR ERROES
+ffuf -w /media/sf_COMPARTIDA_VB_CIBERSEGURIDAD_KALI/SecLists/rockyou.txt  -u http://10.10.11.11 -H "Host: FUZZ.crm" -fs 15949
+
+
+AIRCRAFT
+poner la tarjeta en modo monitor
+sudo airodump-ng wlan0mon
+
+
+
+
+
