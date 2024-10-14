@@ -1,0 +1,10 @@
+1.- git status
+2.- si hay cambios, git add . (todo lo actualizdo como lo que no) / o git add (especificando)
+3.- git pull origin main ( para comprbar que tenemos la ultima version como el remoto y no haya probelmas)
+4.- git push origin main / sube los cambios
+
+NOTA.- git fetch , no hace falta si lsolo quiero subir cambios de local a remoto
+usarlo para ver los cambios del remoto pero sin que se actualicen en local
+git fetch origin
+oara comparar: git diff origin main
+si decides hacer los cambios: git pull origin main
