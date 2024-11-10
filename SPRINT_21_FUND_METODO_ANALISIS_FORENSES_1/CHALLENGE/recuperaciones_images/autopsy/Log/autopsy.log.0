@@ -1,0 +1,315 @@
+2024-11-10 03:19:11.302 org.sleuthkit.autopsy.centralrepository.datamodel.RdbmsCentralRepo upgradeSchema
+INFO: Central Repository is up to date
+2024-11-10 03:19:11.365 org.sleuthkit.autopsy.keywordsearch.Server startLocalSolr
+INFO: Starting local Solr SOLR8 server
+2024-11-10 03:19:11.367 org.sleuthkit.autopsy.keywordsearch.Server startLocalSolr
+INFO: Port [23,232] available, starting Solr
+2024-11-10 03:19:11.367 org.sleuthkit.autopsy.keywordsearch.Server startLocalSolr
+INFO: Starting Solr 8 server
+2024-11-10 03:19:11.368 org.sleuthkit.autopsy.keywordsearch.Server runLocalSolr8ControlCommand
+INFO: Setting Solr 8 directory: C:\Program Files\Autopsy-4.21.0\autopsy\solr
+2024-11-10 03:19:11.368 org.sleuthkit.autopsy.keywordsearch.Server runLocalSolr8ControlCommand
+INFO: Running Solr 8 command: [C:\Program Files\Autopsy-4.21.0\autopsy\solr\bin\autopsy-solr.cmd, start, -p, 23232] from C:\Program Files\Autopsy-4.21.0\autopsy\solr
+2024-11-10 03:19:11.418 org.sleuthkit.autopsy.keywordsearch.Server runLocalSolr8ControlCommand
+INFO: Finished running Solr 8 command
+2024-11-10 03:20:11.428 org.sleuthkit.autopsy.keywordsearch.Server startLocalSolr
+WARNING: Local Solr server failed to respond to status requests.
+2024-11-10 03:20:11.429 org.sleuthkit.autopsy.keywordsearch.Server configureSolrConnection
+SEVERE: Local Solr server is not running
+2024-11-10 03:20:11.43 org.sleuthkit.autopsy.casemodule.Case openAppServiceCaseResources
+SEVERE: Solr Keyword Search Service failed to open case resources for E2_U2_S21_analisis_forense
+java.util.concurrent.ExecutionException: org.sleuthkit.autopsy.appservices.AutopsyService$AutopsyServiceException: Failed to open or create core for Z:\home\vice\Desktop\E2_U2_S21_analisis_forense
+	java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+	org.sleuthkit.autopsy.casemodule.Case.openAppServiceCaseResources(Case.java:2897)
+	org.sleuthkit.autopsy.casemodule.Case.create(Case.java:2243)
+	org.sleuthkit.autopsy.casemodule.Case.lambda$doOpenCaseAction$6(Case.java:2160)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	java.base/java.lang.Thread.run(Thread.java:833)
+org.sleuthkit.autopsy.appservices.AutopsyService$AutopsyServiceException: Failed to open or create core for Z:\home\vice\Desktop\E2_U2_S21_analisis_forense
+	java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+	org.sleuthkit.autopsy.casemodule.Case.openAppServiceCaseResources(Case.java:2897)
+	org.sleuthkit.autopsy.casemodule.Case.create(Case.java:2243)
+	org.sleuthkit.autopsy.casemodule.Case.lambda$doOpenCaseAction$6(Case.java:2160)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	java.base/java.lang.Thread.run(Thread.java:833)
+org.sleuthkit.autopsy.keywordsearch.KeywordSearchModuleException: Unable to connect to Solr server Local keyword search service not yet running
+	java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+	org.sleuthkit.autopsy.casemodule.Case.openAppServiceCaseResources(Case.java:2897)
+	org.sleuthkit.autopsy.casemodule.Case.create(Case.java:2243)
+	org.sleuthkit.autopsy.casemodule.Case.lambda$doOpenCaseAction$6(Case.java:2160)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	java.base/java.lang.Thread.run(Thread.java:833)
+org.sleuthkit.autopsy.keywordsearch.KeywordSearchModuleException: Local keyword search service not yet running
+	java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+	org.sleuthkit.autopsy.casemodule.Case.openAppServiceCaseResources(Case.java:2897)
+	org.sleuthkit.autopsy.casemodule.Case.create(Case.java:2243)
+	org.sleuthkit.autopsy.casemodule.Case.lambda$doOpenCaseAction$6(Case.java:2160)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	java.base/java.lang.Thread.run(Thread.java:833)
+2024-11-10 03:20:11.525 org.sleuthkit.autopsy.imagegallery.PerCaseProperties getConfigSetting
+INFO: File did not exist. Created file [Image Gallery.properties]
+2024-11-10 03:20:11.713 org.sleuthkit.autopsy.imagegallery.datamodel.DrawableDB setPragmas
+INFO: sqlite-jdbc version 3.42.0.0 loaded in native mode
+2024-11-10 03:20:12.008 org.sleuthkit.autopsy.casemodule.Case openAsCurrentCase
+INFO: Opened E2_U2_S21_analisis_forense (e2_u2_s21_analisis_forense_20241110_031909) in Z:\home\vice\Desktop\E2_U2_S21_analisis_forense as the current case
+2024-11-10 03:20:13.844 org.sleuthkit.autopsy.corecomponents.DataContentViewerHex <init>
+INFO: Created HexView instance: org.sleuthkit.autopsy.corecomponents.DataContentViewerHex[,0,0,0x0,invalid,layout=javax.swing.GroupLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=58]]
+2024-11-10 03:20:14.529 org.sleuthkit.autopsy.contentviewers.MediaFileViewer <init>
+INFO: Created MediaView instance: org.sleuthkit.autopsy.contentviewers.MediaFileViewer[,0,0,0x0,invalid,layout=java.awt.CardLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-10 03:20:15.978 org.sleuthkit.autopsy.contentviewers.FileViewer <init>
+INFO: Created ApplicationContentViewer instance: org.sleuthkit.autopsy.contentviewers.FileViewer[,0,0,0x0,invalid,layout=javax.swing.OverlayLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-10 03:20:16.502 org.sleuthkit.autopsy.corecomponents.DataContentTopComponent <init>
+INFO: Created DataContentTopComponent instance: org.sleuthkit.autopsy.corecomponents.DataContentTopComponent[Data Content,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=256,maximumSize=,minimumSize=,preferredSize=]
+2024-11-10 03:20:16.73 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Cyber Triage Malware Scanner, version = 1.0.0
+2024-11-10 03:20:16.786 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Central Repository, version = 4.21.0
+2024-11-10 03:20:16.838 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Data Source Integrity, version = 4.21.0
+2024-11-10 03:20:16.89 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = DJI Drone Analyzer, version = 4.21.0
+2024-11-10 03:20:16.942 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Embedded File Extractor, version = 4.21.0
+2024-11-10 03:20:16.943 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Encryption Detection, version = 4.21.0
+2024-11-10 03:20:17.004 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Extension Mismatch Detector, version = 4.21.0
+2024-11-10 03:20:17.066 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = File Type Identification, version = 4.21.0
+2024-11-10 03:20:17.12 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Hash Lookup, version = 4.21.0
+2024-11-10 03:20:17.12 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Interesting Files Identifier, version = 4.21.0
+2024-11-10 03:20:17.173 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Android Analyzer (aLEAPP), version = 4.21.0
+2024-11-10 03:20:17.173 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = iOS Analyzer (iLEAPP), version = 4.21.0
+2024-11-10 03:20:17.235 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = PhotoRec Carver, version = 7.0
+2024-11-10 03:20:17.286 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Picture Analyzer, version = 4.21.0
+2024-11-10 03:20:17.337 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Plaso, version = 4.21.0
+2024-11-10 03:20:17.388 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Virtual Machine Extractor, version = 4.21.0
+2024-11-10 03:20:17.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = YARA Analyzer, version = 4.21.0
+2024-11-10 03:20:17.452 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Keyword Search, version = 4.21.0
+2024-11-10 03:20:17.458 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Email Parser, version = 4.21.0
+2024-11-10 03:20:17.461 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Recent Activity, version = 4.21.0
+2024-11-10 03:20:17.523 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader getIngestModuleFactories
+INFO: Found ingest module factory: name = GPX Parser, version = 1.2
+2024-11-10 03:20:17.523 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader getIngestModuleFactories
+INFO: Found ingest module factory: name = Android Analyzer, version = 4.21.0
+2024-11-10 03:20:17.68 org.sleuthkit.autopsy.keywordsearch.KeywordSearchGlobalSearchSettingsPanel customizeComponents
+WARNING: Could not get number of indexed files/chunks
+2024-11-10 03:20:22.783 com.basistech.df.cybertriage.autopsy.ctapi.CTCloudHttpClient createSSLContext
+INFO: Creating custom SSL context
+2024-11-10 03:20:22.783 com.basistech.df.cybertriage.autopsy.ctapi.CTCloudHttpClient getKeyManagers
+INFO: Using default algorithm to create trust store: SunX509
+2024-11-10 03:20:22.783 com.basistech.df.cybertriage.autopsy.ctapi.CTCloudHttpClient getTrustManagers
+INFO: Using default algorithm to create trust store: PKIX
+2024-11-10 03:20:22.923 com.basistech.df.cybertriage.autopsy.incidentoptions.CTSettings getAppDataLocalDirectory
+INFO: Application Data Path: C:\users\vice\AppData\Local\cybertriage
+2024-11-10 03:20:23.095 org.sleuthkit.autopsy.casemodule.AddImageWizardSelectDspPanel getComponent
+WARNING: There was no properties file containing the last DataSourceProcessor used, Disk Image or VM will be selected as default selection
+2024-11-10 03:21:39.182 org.sleuthkit.autopsy.ingest.IngestMonitor$MonitorTimerAction logMonitoredRootDirectory
+INFO: Monitoring disk space of Z:\
+2024-11-10 03:21:39.183 org.sleuthkit.autopsy.ingest.IngestManager startIngestJob
+INFO: Starting ingest job 0 at 1731205299183
+2024-11-10 03:21:39.189 org.sleuthkit.autopsy.ingest.IngestPipelinesConfiguration getInstance
+INFO: Creating ingest module loader instance
+2024-11-10 03:21:39.438 org.sleuthkit.autopsy.recentactivity.SearchEngineURLQueryAnalyzer loadConfigFile
+INFO: Load successful
+2024-11-10 03:21:40.173 org.sleuthkit.autopsy.modules.yara.YaraIngestModule startUp
+INFO: YARA ingest module: No rule set was selected for this ingest job.
+2024-11-10 03:21:40.174 org.sleuthkit.autopsy.keywordsearch.KeywordSearchIngestModule shutDown
+INFO: Keyword search ingest module instance 0 shutting down
+2024-11-10 03:21:40.219 org.sleuthkit.autopsy.ingest.IngestManager startIngestJob
+SEVERE: Error starting Keyword Search ingest module for job 0
+org.sleuthkit.autopsy.ingest.IngestModule$IngestModuleException: The index could not be opened or does not exist.
+	org.sleuthkit.autopsy.keywordsearch.KeywordSearchIngestModule.startUp(KeywordSearchIngestModule.java:245)
+	org.sleuthkit.autopsy.ingest.IngestPipeline$PipelineModule.startUp(IngestPipeline.java:418)
+	org.sleuthkit.autopsy.ingest.IngestPipeline.startUpIngestModules(IngestPipeline.java:159)
+	org.sleuthkit.autopsy.ingest.IngestPipeline.startUp(IngestPipeline.java:113)
+	org.sleuthkit.autopsy.ingest.IngestJobExecutor.startUpIngestModulePipeline(IngestJobExecutor.java:259)
+	org.sleuthkit.autopsy.ingest.IngestJobExecutor.startUpIngestModulePipelines(IngestJobExecutor.java:225)
+	org.sleuthkit.autopsy.ingest.IngestJobExecutor.startUp(IngestJobExecutor.java:193)
+	org.sleuthkit.autopsy.ingest.IngestJob.start(IngestJob.java:235)
+	org.sleuthkit.autopsy.ingest.IngestManager.startIngestJob(IngestManager.java:627)
+	org.sleuthkit.autopsy.ingest.IngestJobInputStream.<init>(IngestJobInputStream.java:42)
+	org.sleuthkit.autopsy.ingest.IngestManager.openIngestStream(IngestManager.java:447)
+	org.sleuthkit.autopsy.casemodule.ImageDSProcessor.runWithIngestStream(ImageDSProcessor.java:284)
+	org.sleuthkit.autopsy.casemodule.AddImageWizardAddingProgressPanel.lambda$startDataSourceProcessing$0(AddImageWizardAddingProgressPanel.java:371)
+	java.base/java.lang.Thread.run(Thread.java:833)
+2024-11-10 03:21:40.219 org.sleuthkit.autopsy.ingest.IngestManager startIngestJob
+SEVERE: Ingest job 0 could not be started
+2024-11-10 03:21:40.219 org.sleuthkit.autopsy.ingest.IngestJobExecutor logInfoMessage
+INFO: Finished all ingest tasks for tier 0 of ingest job (data source = image_EJ_u2_S21.dd, data source object ID = 1, job ID = 0)
+2024-11-10 03:21:40.219 org.sleuthkit.autopsy.casemodule.ImageDSProcessor runWithIngestStream
+SEVERE: Error starting ingest modules
+org.sleuthkit.datamodel.TskCoreException: Error starting ingest modules
+	org.sleuthkit.autopsy.ingest.IngestManager.openIngestStream(IngestManager.java:456)
+	org.sleuthkit.autopsy.casemodule.ImageDSProcessor.runWithIngestStream(ImageDSProcessor.java:284)
+	org.sleuthkit.autopsy.casemodule.AddImageWizardAddingProgressPanel.lambda$startDataSourceProcessing$0(AddImageWizardAddingProgressPanel.java:371)
+	java.base/java.lang.Thread.run(Thread.java:833)
+org.sleuthkit.autopsy.ingest.IngestManager$IngestManagerException: Errors occurred while starting ingest
+	org.sleuthkit.autopsy.ingest.IngestManager.openIngestStream(IngestManager.java:456)
+	org.sleuthkit.autopsy.casemodule.ImageDSProcessor.runWithIngestStream(ImageDSProcessor.java:284)
+	org.sleuthkit.autopsy.casemodule.AddImageWizardAddingProgressPanel.lambda$startDataSourceProcessing$0(AddImageWizardAddingProgressPanel.java:371)
+	java.base/java.lang.Thread.run(Thread.java:833)
+2024-11-10 03:21:40.226 org.sleuthkit.autopsy.ingest.IngestJobExecutor logInfoMessage
+INFO: Scheduling ingest tasks for tier 1 of ingest job (data source = image_EJ_u2_S21.dd, data source object ID = 1, job ID = 0)
+2024-11-10 03:21:40.227 org.sleuthkit.autopsy.ingest.IngestJobExecutor logInfoMessage
+INFO: Finished all ingest tasks for tier 1 of ingest job (data source = image_EJ_u2_S21.dd, data source object ID = 1, job ID = 0)
+2024-11-10 03:21:40.227 org.sleuthkit.autopsy.ingest.IngestJobExecutor logInfoMessage
+INFO: Finished all ingest tasks for ingest job (data source = image_EJ_u2_S21.dd, data source object ID = 1, job ID = 0)
+2024-11-10 03:21:40.233 org.sleuthkit.autopsy.ingest.IngestManager finishIngestJob
+INFO: Ingest job 0 cancelled at 1731205300233
+2024-11-10 03:25:51.866 org.sleuthkit.autopsy.contentviewers.FileViewer isSupported
+INFO: Mimetype not known for file: Unalloc_3_0_1048576
+2024-11-10 03:26:24.058 org.sleuthkit.autopsy.contentviewers.FileViewer isSupported
+INFO: Mimetype not known for file: Unalloc_7_1108004864_2181746688
+2024-11-10 03:26:26.367 org.sleuthkit.autopsy.contentviewers.FileViewer isSupported
+INFO: Mimetype not known for file: Unalloc_7_17850368_1108004864
+2024-11-10 03:26:26.982 org.sleuthkit.autopsy.contentviewers.FileViewer isSupported
+INFO: Mimetype not known for file: Unalloc_7_2181746688_3255488512
+2024-11-10 03:26:27.602 org.sleuthkit.autopsy.contentviewers.FileViewer isSupported
+INFO: Mimetype not known for file: Unalloc_7_3255488512_4329230336
+2024-11-10 03:26:28.585 org.sleuthkit.autopsy.contentviewers.FileViewer isSupported
+INFO: Mimetype not known for file: Unalloc_7_4329230336_5402972160
+2024-11-10 03:26:29.266 org.sleuthkit.autopsy.contentviewers.FileViewer isSupported
+INFO: Mimetype not known for file: Unalloc_7_6476713984_7550455808
+2024-11-10 03:26:31.219 org.sleuthkit.autopsy.contentviewers.FileViewer isSupported
+INFO: Mimetype not known for file: Unalloc_7_7550455808_8011120640
+2024-11-10 03:27:11.47 org.sleuthkit.autopsy.textextractors.TikaTextExtractor getReader
+WARNING: Error with file [id=252] TMNT_1990_Donatello_IMG_0048.jpeg, see Tika log for details...
+2024-11-10 03:27:11.573 org.sleuthkit.autopsy.coreutils.ImageUtils getImageProperty
+WARNING: ImageIO could not read /img_image_EJ_u2_S21.dd/vol_vol2/TMNT_1990_Donatello_IMG_0048.jpeg: javax.imageio.IIOException: No SOF segment in stream
+2024-11-10 03:27:11.578 org.sleuthkit.autopsy.coreutils.ImageUtils$ReadImageTaskBase failed
+WARNING: ImageIO could not read /img_image_EJ_u2_S21.dd/vol_vol2/TMNT_1990_Donatello_IMG_0048.jpeg.  It may be unsupported or corrupt: javax.imageio.IIOException: No SOF segment in stream
+2024-11-10 03:27:13.18 org.sleuthkit.autopsy.textextractors.TikaTextExtractor getReader
+WARNING: Error with file [id=252] TMNT_1990_Donatello_IMG_0048.jpeg, see Tika log for details...
+2024-11-10 03:27:13.216 org.sleuthkit.autopsy.coreutils.ImageUtils getImageProperty
+WARNING: ImageIO could not read /img_image_EJ_u2_S21.dd/vol_vol2/TMNT_1990_Donatello_IMG_0048.jpeg: javax.imageio.IIOException: No SOF segment in stream
+2024-11-10 03:27:13.223 org.sleuthkit.autopsy.coreutils.ImageUtils$ReadImageTaskBase failed
+WARNING: ImageIO could not read /img_image_EJ_u2_S21.dd/vol_vol2/TMNT_1990_Donatello_IMG_0048.jpeg.  It may be unsupported or corrupt: javax.imageio.IIOException: No SOF segment in stream
+2024-11-10 03:27:21.295 org.sleuthkit.autopsy.textextractors.TikaTextExtractor getReader
+WARNING: Error with file [id=252] TMNT_1990_Donatello_IMG_0048.jpeg, see Tika log for details...
+2024-11-10 03:27:21.331 org.sleuthkit.autopsy.coreutils.ImageUtils getImageProperty
+WARNING: ImageIO could not read /img_image_EJ_u2_S21.dd/vol_vol2/TMNT_1990_Donatello_IMG_0048.jpeg: javax.imageio.IIOException: No SOF segment in stream
+2024-11-10 03:27:21.334 org.sleuthkit.autopsy.coreutils.ImageUtils$ReadImageTaskBase failed
+WARNING: ImageIO could not read /img_image_EJ_u2_S21.dd/vol_vol2/TMNT_1990_Donatello_IMG_0048.jpeg.  It may be unsupported or corrupt: javax.imageio.IIOException: No SOF segment in stream
+2024-11-10 03:27:52.965 org.sleuthkit.autopsy.textextractors.TikaTextExtractor getReader
+WARNING: Error with file [id=252] TMNT_1990_Donatello_IMG_0048.jpeg, see Tika log for details...
+2024-11-10 03:27:53.002 org.sleuthkit.autopsy.coreutils.ImageUtils getImageProperty
+WARNING: ImageIO could not read /img_image_EJ_u2_S21.dd/vol_vol2/TMNT_1990_Donatello_IMG_0048.jpeg: javax.imageio.IIOException: No SOF segment in stream
+2024-11-10 03:27:53.005 org.sleuthkit.autopsy.coreutils.ImageUtils$ReadImageTaskBase failed
+WARNING: ImageIO could not read /img_image_EJ_u2_S21.dd/vol_vol2/TMNT_1990_Donatello_IMG_0048.jpeg.  It may be unsupported or corrupt: javax.imageio.IIOException: No SOF segment in stream
+2024-11-10 03:28:04.081 org.sleuthkit.autopsy.textextractors.TikaTextExtractor getReader
+WARNING: Error with file [id=252] TMNT_1990_Donatello_IMG_0048.jpeg, see Tika log for details...
+2024-11-10 03:28:04.107 org.sleuthkit.autopsy.coreutils.StringExtract$StringExtractUnicodeTable init
+INFO: initialized, unicode table loaded
+2024-11-10 03:28:43.197 org.sleuthkit.autopsy.contentviewers.FileViewer isSupported
+INFO: Mimetype not known for file: OHMYDATA    (Volume Label Entry)
+2024-11-10 03:30:20.474 org.sleuthkit.autopsy.contentviewers.FileViewer isSupported
+INFO: Mimetype not known for file: Unalloc_7_1108004864_2181746688
+2024-11-10 03:34:20.991 org.sleuthkit.autopsy.report.ReportBranding getReportFooter
+INFO: Using default report branding for report footer
+2024-11-10 03:34:21.0 org.sleuthkit.autopsy.report.modules.html.HTMLReport useDataTypeIcon
+INFO: useDataTypeIcon: dataType = Tagged Files
+2024-11-10 03:34:21.002 org.sleuthkit.autopsy.report.modules.html.HTMLReport useDataTypeIcon
+INFO: useDataTypeIcon: dataType = Tagged Images
+2024-11-10 03:34:21.002 org.sleuthkit.autopsy.report.modules.html.HTMLReport useDataTypeIcon
+INFO: useDataTypeIcon: dataType = Tagged Results
+2024-11-10 03:37:00.137 org.sleuthkit.autopsy.corecomponents.DataContentViewerHex <init>
+INFO: Created HexView instance: org.sleuthkit.autopsy.corecomponents.DataContentViewerHex[,0,0,0x0,invalid,layout=javax.swing.GroupLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=58]]
+2024-11-10 03:37:00.165 org.sleuthkit.autopsy.contentviewers.MediaFileViewer <init>
+INFO: Created MediaView instance: org.sleuthkit.autopsy.contentviewers.MediaFileViewer[,0,0,0x0,invalid,layout=java.awt.CardLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-10 03:37:00.166 org.sleuthkit.autopsy.contentviewers.FileViewer <init>
+INFO: Created ApplicationContentViewer instance: org.sleuthkit.autopsy.contentviewers.FileViewer[,0,0,0x0,invalid,layout=javax.swing.OverlayLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-10 03:37:34.449 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Cyber Triage Malware Scanner, version = 1.0.0
+2024-11-10 03:37:34.449 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Central Repository, version = 4.21.0
+2024-11-10 03:37:34.449 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Data Source Integrity, version = 4.21.0
+2024-11-10 03:37:34.449 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = DJI Drone Analyzer, version = 4.21.0
+2024-11-10 03:37:34.449 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Embedded File Extractor, version = 4.21.0
+2024-11-10 03:37:34.449 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Encryption Detection, version = 4.21.0
+2024-11-10 03:37:34.449 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Extension Mismatch Detector, version = 4.21.0
+2024-11-10 03:37:34.449 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = File Type Identification, version = 4.21.0
+2024-11-10 03:37:34.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Hash Lookup, version = 4.21.0
+2024-11-10 03:37:34.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Interesting Files Identifier, version = 4.21.0
+2024-11-10 03:37:34.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Android Analyzer (aLEAPP), version = 4.21.0
+2024-11-10 03:37:34.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = iOS Analyzer (iLEAPP), version = 4.21.0
+2024-11-10 03:37:34.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = PhotoRec Carver, version = 7.0
+2024-11-10 03:37:34.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Picture Analyzer, version = 4.21.0
+2024-11-10 03:37:34.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Plaso, version = 4.21.0
+2024-11-10 03:37:34.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Virtual Machine Extractor, version = 4.21.0
+2024-11-10 03:37:34.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = YARA Analyzer, version = 4.21.0
+2024-11-10 03:37:34.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Keyword Search, version = 4.21.0
+2024-11-10 03:37:34.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Email Parser, version = 4.21.0
+2024-11-10 03:37:34.45 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader addFactory
+INFO: Found ingest module factory: name = Recent Activity, version = 4.21.0
+2024-11-10 03:37:34.495 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader getIngestModuleFactories
+INFO: Found ingest module factory: name = GPX Parser, version = 1.2
+2024-11-10 03:37:34.495 org.sleuthkit.autopsy.ingest.IngestModuleFactoryLoader getIngestModuleFactories
+INFO: Found ingest module factory: name = Android Analyzer, version = 4.21.0
+2024-11-10 03:37:34.536 org.sleuthkit.autopsy.keywordsearch.KeywordSearchGlobalSearchSettingsPanel customizeComponents
+WARNING: Could not get number of indexed files/chunks
+2024-11-10 03:38:20.209 org.sleuthkit.autopsy.contentviewers.SQLiteViewer selectTable
+WARNING: Failed to load table No tables found from DB file 'psid.db' (objId=34)
+2024-11-10 03:39:40.159 org.sleuthkit.autopsy.keywordsearch.Server stopLocalSolr
+INFO: Stopping Solr 8 server
+2024-11-10 03:39:40.159 org.sleuthkit.autopsy.keywordsearch.Server runLocalSolr8ControlCommand
+INFO: Setting Solr 8 directory: C:\Program Files\Autopsy-4.21.0\autopsy\solr
+2024-11-10 03:39:40.16 org.sleuthkit.autopsy.keywordsearch.Server runLocalSolr8ControlCommand
+INFO: Running Solr 8 command: [C:\Program Files\Autopsy-4.21.0\autopsy\solr\bin\autopsy-solr.cmd, stop, -k, jjk#09s, -p, 23232] from C:\Program Files\Autopsy-4.21.0\autopsy\solr
+2024-11-10 03:39:40.221 org.sleuthkit.autopsy.keywordsearch.Server runLocalSolr8ControlCommand
+INFO: Finished running Solr 8 command
+2024-11-10 03:39:40.221 org.sleuthkit.autopsy.keywordsearch.Server stopLocalSolr
+INFO: Waiting for Solr server to stop
+2024-11-10 03:39:41.103 org.sleuthkit.autopsy.keywordsearch.Server stopLocalSolr
+INFO: Finished stopping Solr server
+2024-11-10 03:39:41.103 org.sleuthkit.autopsy.core.Installer <init>
+INFO: core installer created
+2024-11-10 03:39:41.195 org.sleuthkit.autopsy.casemodule.Case closeCurrentCase
+INFO: Closing current case E2_U2_S21_analisis_forense (e2_u2_s21_analisis_forense_20241110_031909) in Z:\home\vice\Desktop\E2_U2_S21_analisis_forense
+2024-11-10 03:39:43.201 org.sleuthkit.autopsy.imagegallery.ImageGalleryController shutDown
+INFO: Shutting down image gallery controller for case E2_U2_S21_analisis_forense (e2_u2_s21_analisis_forense_20241110_031909)
+2024-11-10 03:39:43.202 org.sleuthkit.autopsy.imagegallery.datamodel.DrawableDB close
+INFO: Closing the drawable.db
+2024-11-10 03:39:43.212 org.sleuthkit.autopsy.imagegallery.ImageGalleryController shutDown
+INFO: Completed shut down of image gallery controller for case E2_U2_S21_analisis_forense (e2_u2_s21_analisis_forense_20241110_031909)

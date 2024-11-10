@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutopsyCase>
+  <SchemaVersion>6.0</SchemaVersion>
+  <CreatedDate>2024/11/10 03:19:09 (CET)</CreatedDate>
+  <ModifiedDate>2024/11/10 03:19:10 (CET)</ModifiedDate>
+  <CreatedByAutopsyVersion>4.21.0</CreatedByAutopsyVersion>
+  <SavedByAutopsyVersion>4.21.0</SavedByAutopsyVersion>
+  <Case>
+    <Name>e2_u2_s21_analisis_forense_20241110_031909</Name>
+    <DisplayName>E2_U2_S21_analisis_forense</DisplayName>
+    <Number>02_21</Number>
+    <Examiner/>
+    <ExaminerPhone/>
+    <ExaminerEmail/>
+    <CaseNotes/>
+    <CaseType>Single-user case</CaseType>
+    <Database/>
+    <CaseDatabase>autopsy.db</CaseDatabase>
+    <TextIndex/>
+  </Case>
+  <ContentProvider>
+    <Name/>
+  </ContentProvider>
+  <OriginalCase/>
+</AutopsyCase>
